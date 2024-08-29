@@ -77,9 +77,3 @@ query4 = transformed_df.selectExpr("CAST(id AS STRING) AS key", "to_json(struct(
 # Await termination of all queries
 spark.streams.awaitAnyTermination()
 
-query1.awaitTermination()
-query2.awaitTermination()
-query3.awaitTermination()
-query4.awaitTermination()
-
-spark.stop()
